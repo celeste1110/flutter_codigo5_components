@@ -73,8 +73,112 @@ class CardPage extends StatelessWidget {
                   child: Text(
                     'Follow me',
                     style: GoogleFonts.montserrat(
-                      color: Colors.white ,
+                      color: Colors.white,
                       fontWeight: FontWeight.w500,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.symmetric(
+              horizontal: 12.0,
+              vertical: 12.0,
+            ),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.07),
+                  offset: const Offset(4, 4),
+                  blurRadius: 12.0,
+                )
+              ],
+            ),
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/images/item1.png',
+                  height: 120.0,
+                ),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Text(
+                        'Fiorella Guadalupe de las Nieves Azules',
+                        style: GoogleFonts.montserrat(
+                          color: Colors.black.withOpacity(0.7),
+                          fontSize: 16.0,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 6.0,
+                      ),
+                      Text(
+                        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultricies ac ante ac auctor. Vivamus condimentum tellus tellus. Aenean ullamcorper eget ipsum non malesuada. Nunc bibendum consequat consectetur. Vivamus vitae lorem arcu. Vestibulum in hendrerit lacus. Curabitur porta eget nulla ac congue. ',
+                        maxLines: 4,
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.montserrat(
+                          color: Colors.black.withOpacity(0.60),
+                          fontSize: 13.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin:
+                const EdgeInsets.symmetric(vertical: 12.0, horizontal: 12.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color:Colors.black.withOpacity(0.06) ,
+                  blurRadius: 12,
+                  offset: const Offset(4, 4),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                // Container(
+                //   height: 130.0,
+                //   width: 130.0,
+                //   decoration: BoxDecoration(
+                //     borderRadius: BorderRadius.circular(12.0),
+                //     image: DecorationImage(
+                //       image: NetworkImage('https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',),
+                //       fit: BoxFit.cover,
+                //     ),
+                //   ),
+                // ),
+                ClipRRect(
+                   borderRadius:BorderRadius.circular(12.0),
+                  child: Image.network(
+                    'https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+                    height: 130.0,
+                    width: 130.0,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                const Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      'Maecenas velit sem, bibendum at porttitor eu, feugiat vitae enim. Nunc at sodales dolor. In ornare vel ipsum vitae ornare. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+                      maxLines: 7,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
                 ),

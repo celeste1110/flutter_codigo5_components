@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_codigo5_components/pages/alert2_page.dart';
+import 'package:flutter_codigo5_components/pages/reto1.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'alert_page.dart';
@@ -64,6 +65,10 @@ class HomePages extends StatelessWidget {
               ItemComponentWidget(
                 title: 'Cards',
                 toPage: CardPage(),
+              ),
+              ItemComponentWidget(
+                title: 'Reto1',
+                toPage: Reto1Page(),
               ),
 
               //ItemComponentWidget(title: 'Alerta'),
