@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'alert_page.dart';
 import 'avatar_page.dart';
+import 'card_pages.dart';
 
 class HomePages extends StatelessWidget {
   const HomePages({Key? key}) : super(key: key);
@@ -62,7 +63,7 @@ class HomePages extends StatelessWidget {
 
               ItemComponentWidget(
                 title: 'Cards',
-                toPage: AvatarPage(),
+                toPage: CardPage(),
               ),
 
               //ItemComponentWidget(title: 'Alerta'),
