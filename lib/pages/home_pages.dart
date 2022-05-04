@@ -7,6 +7,7 @@ import 'alert_page.dart';
 import 'avatar_page.dart';
 import 'card_pages.dart';
 import 'input_page.dart';
+import 'list_page.dart';
 
 class HomePages extends StatelessWidget {
   const HomePages({Key? key}) : super(key: key);
@@ -74,6 +75,10 @@ class HomePages extends StatelessWidget {
               ItemComponentWidget(
                 title: 'Inputs',
                 toPage: InputPage(),
+              ),
+              ItemComponentWidget(
+                title: 'Lists',
+                toPage: ListPage(),
               ),
 
               //ItemComponentWidget(title: 'Alerta'),

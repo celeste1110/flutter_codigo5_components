@@ -13,12 +13,11 @@ class _InputPageState extends State<InputPage> {
   String name = '';
   TextEditingController _nameController = TextEditingController();
   TextEditingController _dateTimeController = TextEditingController();
-  String valueAux='A';
-  List <String> superheroes=[
+  String valueAux = 'Superman';
+  List<String> superheroes = [
     'Superman',
     'wonder woman',
     'Batman',
-
   ];
   void cambiar_estado() {
     if (estado == true) {
@@ -246,32 +245,15 @@ class _InputPageState extends State<InputPage> {
               ),
               DropdownButton(
                 value: valueAux,
-                items: [
-
-                  DropdownMenuItem(
-                    value: 'A',
-                    child: Text(
-                      superheroes[0],
-                    ),
-                  ),
-                  DropdownMenuItem(
-                    value: 'B',
-                    child: Text(
-                      superheroes[1],
-                    ),
-                  ),
-                  DropdownMenuItem(
-                    value: 'C',
-                    child: Text(
-                      superheroes[2],
-                    ),
-                  ),
-                ],
+                items: superheroes
+                    .map((e) => DropdownMenuItem(
+                          child: Text(e),
+                          value: e,
+                        ))
+                    .toList(),
                 onChanged: (value) {
-                  valueAux=value.toString();
-                  setState(() {
-
-                  });
+                  valueAux = value.toString();
+                  setState(() {});
                 },
               ),
               const SizedBox(
@@ -294,5 +276,18 @@ class _InputPageState extends State<InputPage> {
     if (dateSelected != null) {
       _dateTimeController.text = dateSelected.toString().substring(0, 10);
     }
+  }
+
+  List<DropdownMenuItem<String>> getDataSuperheroe() {
+    List<DropdownMenuItem<String>> items = [];
+    superheroes.forEach((element) {
+      items.add(
+        DropdownMenuItem(
+          child: Text(element),
+          value: element,
+        ),
+      );
+    });
+    return items;
   }
 }
