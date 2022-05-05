@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'alert_page.dart';
 import 'avatar_page.dart';
 import 'card_pages.dart';
+import 'grid_page.dart';
 import 'input_page.dart';
 import 'list_page.dart';
 
@@ -79,6 +80,10 @@ class HomePages extends StatelessWidget {
               ItemComponentWidget(
                 title: 'Lists',
                 toPage: ListPage(),
+              ),
+              ItemComponentWidget(
+                title: 'Grid',
+                toPage: GridPage(),
               ),
 
               //ItemComponentWidget(title: 'Alerta'),

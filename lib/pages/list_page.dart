@@ -206,13 +206,84 @@ class _ListPageState extends State<ListPage> {
       //   },
       // ),
 
+      // body: ListView.builder(
+      //   itemCount: prueba["items"].length,
+      //   itemBuilder: (BuildContext context, int index) {
+      //     return Container(
+      //       margin: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10.0),
+      //       padding:
+      //           const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
+      //       decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      //         BoxShadow(
+      //           color: Colors.black.withOpacity(0.05),
+      //           blurRadius: 12,
+      //           offset: const Offset(4, 4),
+      //         ),
+      //       ]),
+      //       child: ListTile(
+      //         title: Text(
+      //           prueba["items"][index]["prodession"],
+      //           style: GoogleFonts.montserrat(
+      //             color: Color(0xff3E4752),
+      //             fontWeight: FontWeight.w500,
+      //           ),
+      //         ),
+      //         subtitle: Text(
+      //           prueba["items"][index]["name"],
+      //           style: GoogleFonts.montserrat(
+      //             color: Color(0xff3E4752).withOpacity(0.6),
+      //             fontWeight: FontWeight.w400,
+      //           ),
+      //         ),
+      //         leading: ClipRRect(
+      //           borderRadius: BorderRadius.circular(10),
+      //           child: Image.network(
+      //             prueba["items"][index]["image"] + index.toString(),
+      //             height: 60,
+      //             width: 60,
+      //             fit: BoxFit.cover,
+      //           ),
+      //         ),
+      //         // CircleAvatar(
+      //         //   radius: 30.0,
+      //         //   backgroundImage: NetworkImage(
+      //         //     prueba["items"][index]["image"]+(index+1).toString(),
+      //         //   ),
+      //         // ),
+      //         trailing: Column(
+      //           mainAxisAlignment: MainAxisAlignment.center,
+      //           children: [
+      //             Text(
+      //               prueba["items"][index]["date"],
+      //               style: GoogleFonts.montserrat(
+      //                 color: Color(0xff3E4752),
+      //                 fontWeight: FontWeight.w400,
+      //               ),
+      //             ),
+      //
+      //
+      //                 Text(
+      //                   prueba["items"][index]["status"],
+      //                   style: GoogleFonts.montserrat(
+      //                     color: Color(0xff3FC2A3),
+      //                     fontWeight: FontWeight.w400,
+      //                   ),
+      //                 ),
+      //
+      //
+      //           ],
+      //         ),
+      //       ),
+      //     );
+      //   },
+      // ),
       body: ListView.builder(
-        itemCount: prueba["items"].length,
+        itemCount: 100,
         itemBuilder: (BuildContext context, int index) {
           return Container(
             margin: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 10.0),
             padding:
-                const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
+            const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10.0),
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.05),
@@ -220,59 +291,82 @@ class _ListPageState extends State<ListPage> {
                 offset: const Offset(4, 4),
               ),
             ]),
-            child: ListTile(
-              title: Text(
-                prueba["items"][index]["prodession"],
-                style: GoogleFonts.montserrat(
-                  color: Color(0xff3E4752),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-              subtitle: Text(
-                prueba["items"][index]["name"],
-                style: GoogleFonts.montserrat(
-                  color: Color(0xff3E4752).withOpacity(0.6),
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-              leading: ClipRRect(
-                borderRadius: BorderRadius.circular(10),
-                child: Image.network(
-                  prueba["items"][index]["image"] + index.toString(),
-                  height: 60,
-                  width: 60,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              // CircleAvatar(
-              //   radius: 30.0,
-              //   backgroundImage: NetworkImage(
-              //     prueba["items"][index]["image"]+(index+1).toString(),
-              //   ),
-              // ),
-              trailing: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    prueba["items"][index]["date"],
-                    style: GoogleFonts.montserrat(
-                      color: Color(0xff3E4752),
-                      fontWeight: FontWeight.w400,
-                    ),
+            child: Row(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(10.0),
+                  child: Image.network(
+                    "https://picsum.photos/500/500/?image=$index",
+                    height: 60.0,
+                    width: 60.0,
+                    fit: BoxFit.cover,
                   ),
-
-
+                ),
+                const SizedBox(
+                  width: 8.0,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
                       Text(
-                        prueba["items"][index]["status"],
+                        "Web Design",
                         style: GoogleFonts.montserrat(
-                          color: Color(0xff3FC2A3),
+                          color: Color(0xff3E4752),
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 4.0,
+                      ),
+                      Text(
+                        "Wade Warren",
+                        style: GoogleFonts.montserrat(
+                          color: Color(0xff3E4752).withOpacity(0.6),
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-
-
-                ],
-              ),
+                    ],
+                  ),
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      "06/12/2022",
+                      style: GoogleFonts.montserrat(
+                        color: Color(0xff3E4752).withOpacity(0.45),
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 4.0,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          height: 7,
+                          width: 7,
+                          decoration: BoxDecoration(
+                            color: Color(0xff3FC2A3),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 5.0,
+                        ),
+                        Text(
+                          "Completed",
+                          style: GoogleFonts.montserrat(
+                            color: Color(0xff3FC2A3),
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
             ),
           );
         },
